@@ -24,6 +24,8 @@ export default function (app_port = 80, wss_port = 8080) {
     console.info(`Initializing Web server (http://localhost:${app_port})...`);
     const app = express();
 
+    app.use(express.json());
+
     const callback = (req, res) => {
         for (const client of clients)
             client.send(
