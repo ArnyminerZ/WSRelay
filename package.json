@@ -5,7 +5,8 @@
   "main": "app.mjs",
   "scripts": {
     "start": "node app.mjs",
-    "test": "node test/test.mjs"
+    "test": "node test/test.mjs",
+    "version": "node update_version.cjs"
   },
   "repository": {
     "type": "git",
