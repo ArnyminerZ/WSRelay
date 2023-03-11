@@ -26,7 +26,7 @@ ws.on('message', function message(data) {
 
     console.info('>>> Tests passed! <<<');
     ws.close();
-    process.exit(1);
+    process.exit(0);
 });
 
 http.get('http://localhost:3000/test?key=value', {}, function () {
