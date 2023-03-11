@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    container_name: WSRelay
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "8080:8080"

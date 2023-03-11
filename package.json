@@ -2,9 +2,10 @@
   "name": "wsrelay",
   "version": "1.0.0",
   "description": "A webserver that allows subcribing to WebSockets that receive external callbacks.",
-  "main": "app.js",
+  "main": "app.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.mjs",
+    "test": "node test/test.mjs"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/ArnyminerZ/WSRelay/issues"
   },
-  "homepage": "https://github.com/ArnyminerZ/WSRelay#readme"
+  "homepage": "https://github.com/ArnyminerZ/WSRelay#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0"
+  }
 }
