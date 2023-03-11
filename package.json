@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.mjs",
     "test": "node test/test.mjs",
+    "test-production": "node test/test-production.mjs",
     "version": "node update_version.cjs"
   },
   "repository": {
