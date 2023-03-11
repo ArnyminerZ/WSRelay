@@ -24,7 +24,7 @@ export default function (app_port = 80, wss_port = 8080) {
     console.info(`Initializing Web server (http://localhost:${app_port})...`);
     const app = express();
 
-    app.get('*', (req, res) => {
+    const callback = (req, res) => {
         for (const client of clients)
             client.send(
                 JSON.stringify({
@@ -39,10 +39,10 @@ export default function (app_port = 80, wss_port = 8080) {
             );
 
         res.status(200).send('ok');
-    });
-    app.get('*', (req, res) => {
-        res.status(200).send('ok');
-    });
+    };
+
+    app.get('*', callback);
+    app.post('*', callback);
 
     console.info('Starting to listen for Web server...');
     app.listen(app_port, () => {
