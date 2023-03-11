@@ -1,6 +1,6 @@
 {
   "name": "wsrelay",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A webserver that allows subcribing to WebSockets that receive external callbacks.",
   "main": "app.mjs",
   "scripts": {
