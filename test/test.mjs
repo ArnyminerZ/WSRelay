@@ -29,6 +29,6 @@ ws.on('message', function message(data) {
     process.exit(1);
 });
 
-http.get('http://localhost:3000/test?key=value', {}, function (res) {
+http.get('http://localhost:3000/test?key=value', {}, function () {
     console.info('Sent request!');
 });
